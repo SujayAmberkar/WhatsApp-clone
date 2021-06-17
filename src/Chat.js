@@ -4,10 +4,14 @@ import { Avatar,IconButton } from "@material-ui/core"
 import MicIcon from '@material-ui/icons/Mic';
 import { InsertEmoticon } from '@material-ui/icons/';
 import {SearchOutlined,AttachFile,MoreVert} from '@material-ui/icons/'; 
-function Chat() {
-    const [input, setinput] = useState("")
+import { useParams } from 'react-router-dom';
 
-    const [seed, setSeed] = useState('')
+
+function Chat() {
+    const [input, setinput] = useState("");
+    const [seed, setSeed] = useState('');
+    const { roomId } = useParams();
+
     useEffect(() => {
         setSeed(Math.floor(Math.random()*5000));
     }, [])
