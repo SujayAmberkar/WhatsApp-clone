@@ -10,7 +10,6 @@ import {
 function App() {
   return (
     <div className="App">
-      
       <div className="app__body">
       <Router>
         <Switch>
@@ -19,7 +18,7 @@ function App() {
               <Chat />
             </Route>
             <Route path="/">
-              <Chat />
+              {/* <Chat /> */}
             </Route> 
         </Switch>
       </Router>
